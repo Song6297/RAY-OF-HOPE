@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enroll Now - Ray of Hope Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Header background image */
+        body {
+            background: url("./2.jpg") no-repeat center center fixed;
+            background-color: rgba(0, 0, 0, 0.85);
+            background-blend-mode: multiply;
+            background-size: cover;
+        }
+
+        /* Form container */
+        form {
+            margin: 50px auto;
+            padding: 20px;
+            width: 80%; /* Adjusted width for smaller screens */
+            max-width: 600px; /* Added maximum width to prevent form from becoming too wide on large screens */
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Form inputs */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 600px) {
+            form {
+                width: 90%; /* Adjusted width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Enroll Now</h2>
+    <form action="enroll.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        <label for="course">Select Course:</label><br>
+        <select id="course" name="course" required>
+            <option value="course2">Select Course</option>
+            <option value="course1">SSLC</option>
+            <option value="course2">PCMC/B</option>
+            <option value="course2">C/HEBA</option>
+            <option value="course2">Frontend Development</option>
+            <option value="course3">K-CET and NEET crash course</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
